@@ -32,9 +32,5 @@ public class MyExceptionHandler {
     }
 
 
-//    @ExceptionHandler(MethodArgumentNotValidException.class)
-//    public ResponseEntity<String> handleValidationException(MethodArgumentNotValidException ex) {
-//        return new ResponseEntity<>(ex.getBindingResult().getFieldError().getDefaultMessage(), HttpStatus.BAD_REQUEST);
-//    }
 
 }
