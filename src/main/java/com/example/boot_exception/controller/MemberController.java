@@ -3,9 +3,9 @@ package com.example.boot_exception.controller;
 import com.example.boot_exception.dto.MemberRequestDto;
 import com.example.boot_exception.dto.MemberResponseDto;
 import com.example.boot_exception.entity.Member;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
@@ -17,7 +17,7 @@ public class MemberController {
 
     //회원가입 기능
     @PostMapping("/sign-up")
-    public ResponseEntity<MemberResponseDto> createMember(@Validated @RequestBody MemberRequestDto dto) {
+    public ResponseEntity<MemberResponseDto> createMember(@Valid @RequestBody MemberRequestDto dto) {
         //18세 이상 회원가입
 //        if (dto.getAge() < 18) {
 //            throw new CustomException("18세 이상 회원가입 가능합니다.");
